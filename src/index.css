@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-hw-bg: #E6E6E6;
+  --color-hw-card: #151619;
+  --color-hw-text-primary: #FFFFFF;
+  --color-hw-text-secondary: #8E9299;
+  --color-hw-accent-cyan: #00FFFF;
+  --color-hw-accent-magenta: #FF00FF;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+@layer base {
+  body {
+    @apply bg-[var(--color-hw-bg)] text-[var(--color-hw-card)] font-sans overflow-hidden;
+  }
+}
+
+/* Hardware UI Patterns */
+.hw-widget {
+  @apply bg-[var(--color-hw-card)] rounded-xl shadow-2xl border border-white/5;
+}
+
+.hw-label {
+  @apply font-mono text-[10px] uppercase tracking-widest text-[var(--color-hw-text-secondary)];
+}
+
+.hw-value {
+  @apply font-mono text-sm tracking-tight text-[var(--color-hw-text-primary)];
+}
+
+.radial-track {
+  border: 1px dashed var(--color-hw-text-secondary);
+  border-radius: 50%;
+}
+
+.is-active .trigger-icon {
+  background-color: var(--color-hw-accent-cyan);
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.4);
+}
+
+.is-recording .trigger-icon {
+  background-color: var(--color-hw-accent-magenta);
+  box-shadow: 0 0 15px rgba(255, 0, 255, 0.4);
+}
+
+/* Custom Scrollbar for Hardware look */
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-hw-text-secondary);
+  border-radius: 10px;
+}

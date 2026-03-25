@@ -1,0 +1,5 @@
+{
+  "name": "Sonic Grid Station",
+  "description": "A professional-grade hardware interface for neural audio playback and grid-based data simulations.",
+  "requestFramePermissions": []
+}
